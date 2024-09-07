@@ -2,7 +2,7 @@
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
-import { IoChevronForwardOutline, IoChevronBackOutline } from "react-icons/io5";
+import { IoChevronForwardOutline, IoChevronBackOutline, IoCartOutline } from "react-icons/io5";
 import { Autoplay, Navigation, Pagination  } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -197,7 +197,7 @@ const Bestseller = () => {
     <select
   value={selectedVariation}
   onChange={(e) => setSelectedVariation(e.target.value)}
-  className='flex rounded-lg w-2/4 md:w-1/2 lg:w-1/3 text-sm md:text-sm lg:text-md font-archivo focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary border border-gray-300 py-1 px-2'
+  className='flex rounded-lg w-2/4 md:w-1/2 lg:w-1/3 text-xs md:text-sm lg:text-md font-archivo focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary border border-gray-300 py-1 px-2'
 >
   <option value="" disabled>Select Variation</option>
   <option value="Silver">Silver</option>
@@ -208,8 +208,8 @@ const Bestseller = () => {
       <p className="text-gray-900 font=archivo font-semibold lg:text-md md:text-md text-sm" >Rs {item.price}</p>
     </div>
     <div className="mt-3 flex justify-between mb-4 lg:text-sm md:text-sm text-xs">
-      <button className='border border-black text-black rounded-lg lg:px-4 md:px-4 px-2 py-2 font-archivo hover:bg-black/80 hover:text-white'>Add to Cart</button>
-      <button className='bg-secondary rounded-lg lg:px-4 md:px-4 px-2 py-2 text-white font-archivo hover:bg-black/80'>Buy Now</button>
+      <button className='flex items-center gap-1 border border-black text-black rounded-lg lg:px-4 md:px-4 px-6 py-2 font-archivo hover:bg-secondary/75 hover:text-white'><p className='lg:flex md:flex hidden'>Add to Cart </p> <IoCartOutline className='lg:flex md:hidden flex' /></button>
+      <button className='bg-secondary rounded-lg lg:px-4 md:px-4 px-2 py-2 text-white font-archivo hover:bg-secondary/75'>Buy Now</button>
     </div>
   </div>
 </div>
